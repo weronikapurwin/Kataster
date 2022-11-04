@@ -227,13 +227,13 @@ class parser:
                         return 0
                     if self.current_token == 'VI': 
                         self.next_token = self._get_next_token()[1]
-                        if not self.next_token == 'z':
-                            print(f'{self.token_source._get_name()} ERROR: błąd OZK')
-                            return 1
-                        self.next_token = self._get_next_token()[1]
-                        if not self.next_token == self.EOT:
-                            print(f'{self.token_source._get_name()} ERROR: błąd OZK')
-                            return 1
+                        if self.next_token == self.EOT:
+                            return 0
+                        if self.next_token == 'z':
+                            self.next_token = self._get_next_token()[1]
+                            if not self.next_token == self.EOT:
+                                print(f'{self.token_source._get_name()} ERROR: błąd OZK')
+                                return 1
                         return 0
                     self.current_token, self.next_token = self._get_next_token()
                     if not self.next_token == self.EOT:
