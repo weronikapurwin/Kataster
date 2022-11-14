@@ -1,7 +1,5 @@
-# from curses.ascii import isdigit
 from logging import raiseExceptions
 import numpy as np
-import re
 
 # przeszukuje mi kazdy znak w stringu
 class get_input:
@@ -245,13 +243,14 @@ class parser:
 
 if __name__ == "__main__":
     data = np.array([])
+    # filepath = 'Kontury_eksport_dz.txt'
     filepath = 'kontrolny_plik.txt'
     # nr obrebu - nr klasyfikacyjny / ofu ozu ozk
     with open(filepath) as f:
         for line in f:
             data = np.append(data, line.strip())
     data = list(data)
-    data.sort(key = lambda x: len(x))
+    # data.sort(key = lambda x: len(x))
     data1 = np.array([])
     for x in data:
         if len(x) > 4 and len(x) < 20:
