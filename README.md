@@ -1,4 +1,4 @@
-Program sprawdza poprawność klasoużytków, w konsoli zostaje wyprintowany znaleziony błąd wraz z wskazaniem jaki to może być błąd, a także sumuje ilość błędów.
+Program sprawdza poprawność klasoużytków, w konsoli zostaje wyprintowany znaleziony błąd wraz z jego klasyfikacją, a także sumuą ilości błędów.
 
 Poprawne kombinacje OFU-OZU-OZK
 
